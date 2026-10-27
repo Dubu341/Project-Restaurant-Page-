@@ -41,7 +41,6 @@ function contents() {
   phoneImg.src = phoneSVG;
 
   content.append(headImg, restaurant, head, description, info);
-
   info.append(openHours, contact);
   openHours.append(hoursSpans, hoursList);
   hoursList.append(weekDayList, weekEndList);
