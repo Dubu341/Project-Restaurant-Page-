@@ -1,3 +1,38 @@
-body {
+/* body {
   background-color: purple;
+} */
+* {
+  margin: 0;
+}
+body {
+  display: grid;
+  place-items: center;
+}
+header,
+#content {
+  text-align: center;
+  width: 800px;
+}
+img {
+  width: 800px;
+}
+.callSVG {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(30%) saturate(548%)
+    hue-rotate(76deg) brightness(101%) contrast(92%);
+  width: 20px;
+}
+.info {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+.contact {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 30px 1fr;
+}
+ol {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
 }
