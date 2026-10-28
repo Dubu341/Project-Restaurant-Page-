@@ -1,7 +1,7 @@
 import roofTop from "/images/Le-Rooftop.jpg";
 import phoneSVG from "/images/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg";
 
-function contents() {
+function homeContents() {
   const content = document.querySelector("#content");
 
   function createElement(tag, className, text) {
@@ -46,4 +46,4 @@ function contents() {
   hoursList.append(weekDayList, weekEndList);
   contact.append(phoneImg, phone);
 }
-export { contents };
+export { homeContents };

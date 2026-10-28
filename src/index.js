@@ -1,12 +1,19 @@
 import "./styles.css";
-import { contents } from "./homeContent.js";
+import { homeContents } from "./homeContent.js";
+import { menuContent } from "./menuContent.js";
 
-contents();
+homeContents();
 
-const home = document.querySelector(".home");
 const contentDiv = document.querySelector("#content");
+const home = document.querySelector(".home");
+const menu = document.querySelector(".menu");
 
 home.addEventListener("click", () => {
   contentDiv.innerHTML = "";
-  contents();
+  homeContents();
+});
+
+menu.addEventListener("click", () => {
+  contentDiv.innerHTML = "";
+  menuContent();
 });
