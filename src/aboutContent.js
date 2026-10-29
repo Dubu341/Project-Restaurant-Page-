@@ -14,7 +14,27 @@ function aboutContent() {
     "",
     "Figuring out how to render the menu page in js was pretty cool huh. Class constructors are cool huh.",
   );
-  content.append(container);
+
+  const pizzaImgSource = createElement(
+    "a",
+    "",
+    "Tasty looking pizza image on Unsplash",
+  );
+  const pizzeriaImgsource = createElement(
+    "a",
+    "",
+    "pizzeria image on Unsplash",
+  );
+  const links = createElement("div", "links", "");
+  pizzaImgSource.href =
+    "https://unsplash.com/photos/a-slice-of-pizza-with-melted-cheese-being-lifted-kpz1Y1tikGM";
+  pizzeriaImgsource.href =
+    "https://unsplash.com/photos/a-pizza-shop-is-lit-up-at-night-uoMd234p0Uk";
+  pizzaImgSource.target = "_blank";
+  pizzeriaImgsource.target = "_blank";
+
+  content.append(container, links);
+  links.append(pizzaImgSource, pizzeriaImgsource);
   container.append(headText, paragraph);
 }
 export { aboutContent };
