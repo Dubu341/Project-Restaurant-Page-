@@ -1,20 +1,34 @@
-/* body {
-  background-color: purple;
-} */
-/* * {
+* {
   margin: 0;
-} */
-/* body {
-  display: grid;
-  place-items: center;
-} */
-/* header,
-#content {
-  text-align: center;
-  width: 800px;
 }
-img {
-  width: 800px;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* homePge */
+.homeContainer {
+  display: grid;
+  grid-template-columns: 630px 1fr;
+  position: relative;
+}
+.rightInfo {
+  margin-top: 20px;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  grid-template-rows: repeat(2, 1fr) 16fr;
+}
+.homePageImage {
+  max-height: 100vh;
 }
 .callSVG {
   filter: brightness(0) saturate(100%) invert(86%) sepia(30%) saturate(548%)
@@ -22,9 +36,15 @@ img {
   width: 20px;
 }
 .info {
+  position: absolute;
+  top: 800px;
+  left: 60px;
+  color: white;
+  margin-bottom: 10px;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
+  align-self: self-end;
 }
 .contact {
   display: grid;
@@ -35,22 +55,125 @@ ol {
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
-} */
-
-/* #content > div {
-  display: grid;
-  gap: 20px;
 }
-.item {
+
+.restaurantName {
+  color: #59694e;
+  font-size: 24px;
+}
+.homePageH-one {
+  color: #cc2016;
+  font-size: 34px;
+}
+.homePageDescription {
+  font-size: 18px;
+  width: min(75ch, 50%);
+}
+
+/* Menu page */
+
+.menuContainer {
+  margin-top: 20px;
+  padding-bottom: 5px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 300px 300px;
+  gap: 50px;
+}
+.apps > div {
+  display: grid;
+  gap: 5px;
+  width: 300px;
+  grid-template-columns: 1fr 50px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+.pizza > div {
+  display: grid;
+  gap: 5px;
   width: 300px;
   display: grid;
   grid-template-columns: 1fr 50px;
   margin-left: 5px;
 }
+.pizza > h2,
+.apps > h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 20px;
+  border-bottom: 2px solid green;
+  color: red;
+}
+
+.apps > h2 {
+  margin-bottom: 30px;
+}
+
+.pizza {
+  border-left: 2px solid red;
+  padding-left: 20px;
+  display: grid;
+  row-gap: 10px;
+}
+
+.apps {
+  display: grid;
+}
+
 .price {
   display: grid;
   align-self: end;
 }
+h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: red;
+}
+.price {
+  color: green;
+}
 .description {
+  font-size: 12px;
   margin-left: 10px;
-} */
+}
+.menuPagePizzaImage {
+  margin-top: 10px;
+  width: 300px;
+  grid-row: 8/9;
+}
+
+nav {
+  background-color: #ebba80;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+.pizza-btn {
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff4747, #d62121);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(214, 33, 33, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pizza-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(214, 33, 33, 0.6);
+  background: linear-gradient(135deg, #ff5c5c, #e14646);
+}
+.aboutContainer {
+  padding: 50px;
+  display: grid;
+  place-items: center;
+}

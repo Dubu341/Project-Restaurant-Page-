@@ -1,3 +1,4 @@
+import pizzaImage from "/images/Pizza-img.jpg";
 function menuContent() {
   const content = document.querySelector("#content");
 
@@ -41,7 +42,11 @@ function menuContent() {
       "12.75",
       "Grilled chicken or beef or spicy pork, red pepper, onion, and chipotle sauce",
     ),
-    new Item("WHITE PIZZA", "8.75", ""),
+    new Item(
+      "WHITE PIZZA",
+      "8.75",
+      "Mozzarella , nicatta, parmesan cheeses, garlic, and olive oil crust",
+    ),
     new Item(
       "TOMATO BASIL",
       "8.50",
@@ -102,14 +107,17 @@ function menuContent() {
   //   (function () {
   //     pizza.push(new Item("","",""));
   //   })();
-
+  const container = createElement("div", "menuContainer", "");
   const appsDiv = createElement("div", "apps", "");
   const appsHead = createElement("h2", "", "APPS");
   const pizzaDiv = createElement("div", "pizza", "");
   const pizzaHead = createElement("h2", "", "PIZZA");
+  const pizzaImga = createElement("img","menuPagePizzaImage")
+  pizzaImga.src = pizzaImage;
 
-  content.append(appsDiv, pizzaDiv);
-  appsDiv.append(appsHead);
+  content.append(container);
+  container.append(appsDiv, pizzaDiv);
+  appsDiv.append(appsHead, pizzaImga);
   pizzaDiv.append(pizzaHead);
 
   (function appsAppend() {
