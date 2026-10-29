@@ -12,7 +12,7 @@ function aboutContent() {
   const paragraph = createElement(
     "span",
     "",
-    "A small project to get hands-on experience with webpack's entry points, loaders, plugins, and dev server and managing dependencies with npm",
+    "Figuring out how to render the menu page in js was pretty cool huh. Class constructors are cool huh.",
   );
   content.append(container);
   container.append(headText, paragraph);
